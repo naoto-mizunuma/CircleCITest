@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: taskboard_production
-  username: taskboard
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: taskboard_development
+  username: root
   password: <%= ENV['TASKBOARD_DATABASE_PASSWORD'] %>
